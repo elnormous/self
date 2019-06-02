@@ -1,0 +1,3 @@
+#ifndef self
+#  define self (*this)
+#endif
