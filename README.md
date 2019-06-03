@@ -1,6 +1,6 @@
 # C++ `self` keyword
 
-`self` is proposed keyword used to refer the current object in C++ (the same as *this). `self` makes more sense for the language because of the following reasons
+`self` is proposed keyword used to refer the current object in C++ (the same as `*this`). `self` makes more sense for the language because of the following reasons
 
 1. You can not change the pointer of `self`. `this` has a special rule that makes it a prvalue, but `self` does not need any exceptions.
 1. `this` is a special pointer that must point to a valid object however other pointers are not required to do so. References must point to a valid object so `self` is more suited for this purpose than `this`.
