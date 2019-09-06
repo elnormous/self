@@ -2,11 +2,12 @@
 
 `self` is proposed keyword used to refer the current object in C++ (the same as `*this`). `self` makes more sense for the language because of the following reasons
 
-1. You can not change the pointer of `self`. `this` has a special rule that makes it a prvalue, but `self` does not need any exceptions.
+1. You can not change the pointer of `self` because it is a reference. `this` has a special rule that makes it a prvalue, but `self` does not need any exceptions.
 1. `this` is a special pointer that must point to a valid object however other pointers are not required to do so. References must point to a valid object so `self` is more suited for this purpose than `this`.
 1. `return self` instead of `return *this` from assignment operators looks cleaner.
 1. Using raw pointers in C++ is usually discouraged (references are preferred). `this` could encourage programmers to use pointers instead of references.
 1. It is easier to teach new programmers how to use references instead of pointers.
+1. Ref-qualifiers already qualify the type of `this` reference not pointer so using `self` reference instead of `this` pointer makes more sense.
 
 `this` points to current object while `self` references it. `self` should not break the C code that is being compiled with a C++ compiler (e.g. Visual Studio). Lots of C projects use `self` as name for a variable that points to the current object so `self` should not be a reserved keyword (just like `override` or `final`).
 
